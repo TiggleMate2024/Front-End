@@ -16,7 +16,7 @@ function Register(){
             <FontAwesomeIcon icon={faChevronLeft} />
             <StyledBox>
                 <RegisterText children="회원가입" fontSize="24px" fontWeight="500" 
-                    margin="20px 0px 60px 0px" lineHeight="34px" fontFamily="var(--font-bold)"/>
+                    margin="20px 0px 60px 0px" lineHeight="34px"/>
                     <form>
                         <RegisterText children="닉네임"/>
                         <RegisterBox>
