@@ -13,8 +13,6 @@ const StyledButton = styled.div`
     text-align: center;
     padding:20px 0px 0px 0px;
 
-    font-weight: 600;
-    letter-spacing: -0.6px;
 `
 
 function RegisterButton({children}){

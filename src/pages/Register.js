@@ -10,11 +10,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
  
 function Register(){
+    
     return(
         <StyledContainer>
             <FontAwesomeIcon icon={faChevronLeft} />
             <StyledBox>
-                <RegisterText children="회원가입" fontSize="24px" fontWeight="500" margin="20px 0px 60px 0px" lineHeight="34px"/>
+                <RegisterText children="회원가입" fontSize="24px" fontWeight="500" 
+                    margin="20px 0px 60px 0px" lineHeight="34px" fontFamily="var(--font-bold)"/>
                     <form>
                         <RegisterText children="닉네임"/>
                         <RegisterBox>
@@ -35,9 +37,9 @@ function Register(){
                         <RegisterBox>
                             <RegisterInput type="password"/>
                         </RegisterBox>
+                        <RegisterButton children="가입하기"/>
                     </form>
             </StyledBox>
-            <RegisterButton children="가입하기"/>
     </StyledContainer>
     )
 }
