@@ -1,0 +1,38 @@
+.onboarding-text-frame {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.onboarding-text {
+    color: #696969;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+
+.onboarding-btn-frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.onboarding-find-btn {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    padding:20px;
+}
+
+.onboarding-social-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
