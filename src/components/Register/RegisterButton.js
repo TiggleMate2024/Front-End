@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledButton = styled.div`
-    background-color: #7E838D;
+    background-color: #FFB801;
     color:white;
     position:fixed;
     bottom:0; left:0; right:0;
