@@ -4,6 +4,17 @@ import { SlArrowRight } from "react-icons/sl";
 import { BiCircle } from "react-icons/bi";
 import { RiCloseLargeFill } from "react-icons/ri";
 
+import num1Image from "../assets/images/home/num1_image.png";
+import num2Image from "../assets/images/home/num2_image.png";
+import num3Image from "../assets/images/home/num3_image.png";
+import num1 from "../assets/images/home/num1.png";
+import num2 from "../assets/images/home/num2.png";
+import num3 from "../assets/images/home/num3.png";
+import num4 from "../assets/images/home/num4.png";
+import num5 from "../assets/images/home/num5.png";
+import crown from "../assets/images/home/crown.png";
+import vector from "../assets/images/home/vector.png";
+
 export default function Frame(){
   return (
     <div className="out-frame">
@@ -17,11 +28,10 @@ export default function Frame(){
               <div className="overlap-group">
                 <div className="text-wrapper">교통</div>
                 <div className="text-wrapper-2">3건</div>
-                <img className="group" alt="Group" src="image.png" />
+                <img className="group" alt="Group" src={num3Image} />
                 <div className="overlap-group-wrapper">
                   <div className="overlap-group-2">
-                    <img className="star" alt="Star" src="star-2.svg" />
-                    <div className="text-wrapper-3">3</div>
+                    <img className="star" alt="Star" src={num3} />
                   </div>
                 </div>
               </div>
@@ -30,11 +40,10 @@ export default function Frame(){
               <div className="overlap-2">
                 <div className="text-wrapper-4">4건</div>
                 <div className="text-wrapper-5">뷰티</div>
-                <img className="img" alt="Group" src="group-2.png" />
+                <img className="img" alt="Group" src={num2Image} />
                 <div className="overlap-group-wrapper-2">
                   <div className="overlap-group-3">
-                    <img className="star" alt="Star" src="star-2-2.svg" />
-                    <div className="text-wrapper-3">2</div>
+                    <img className="star" alt="Star" src={num2} />
                   </div>
                 </div>
               </div>
@@ -45,16 +54,15 @@ export default function Frame(){
                   <div className="overlap-4">
                     <div className="text-wrapper-6">식비</div>
                     <div className="text-wrapper-7">8건</div>
-                    <img className="group-2" alt="Group" src="group.png" />
+                    <img className="group-2" alt="Group" src={num1Image} />
                     <div className="overlap-group-wrapper-3">
                       <div className="overlap-group-4">
-                        <img className="star-2" alt="Star" src="star-2-3.svg" />
-                        <div className="text-wrapper-8">1</div>
+                        <img className="star-2" alt="Star" src={num1} />
                       </div>
                     </div>
                   </div>
                 </div>
-                <img className="crown" alt="Crown" src="crown.svg" />
+                <img className="crown" alt="Crown" src={crown} />
               </div>
             </div>
           </div>
@@ -76,8 +84,7 @@ export default function Frame(){
           <div className="text-wrapper-13">2건</div>
           <div className="overlap-group-wrapper-4">
             <div className="overlap-group-5">
-              <img className="star-2" alt="Star" src="star-2-4.svg" />
-              <div className="text-wrapper-14">4</div>
+              <img className="star-2" alt="Star" src={num4} />
             </div>
           </div>
         </div>
@@ -86,8 +93,7 @@ export default function Frame(){
           <div className="text-wrapper-13">1건</div>
           <div className="overlap-group-wrapper-4">
             <div className="overlap-group-6">
-              <img className="star-2" alt="Star" src="star-2-5.svg" />
-              <div className="text-wrapper-8">5</div>
+              <img className="star-2" alt="Star" src={num5} />
             </div>
           </div>
         </div>
@@ -108,9 +114,9 @@ export default function Frame(){
                 {/* <img className="union" alt="Union" src="union.svg" /> */}
               </div>
             </div>
-            <div className="group-2">
-              <div className="overlap-group-2">
-                <img className="vector" alt="Vector" src="vector-8490.svg" />
+            <div className="group-3">
+              <div className="overlap-group-3">
+                <img className="vector" alt="Vector" src={vector} />
                 <div className="ellipse" />
                 <div className="ellipse-2" />
                 <div className="ellipse-3" />

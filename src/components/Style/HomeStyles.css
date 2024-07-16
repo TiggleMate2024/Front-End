@@ -110,7 +110,6 @@
   }
   
   .overlap-group-wrapper {
-    box-shadow: 0px 1.54px 3.08px #00000026;
     height: 20px;
     left: 26px;
     position: absolute;
@@ -119,8 +118,6 @@
   }
   
   .overlap-group-2 {
-    /* background-image: url(./star-1.svg); */
-    /* background-color: #ffb701; */
     background-size: 100% 100%;
     height: 19px;
     position: relative;
@@ -128,26 +125,11 @@
   }
   
   .star {
-    height: 16px;
+    height: 21px;
     left: 2px;
     position: absolute;
     top: 2px;
-    width: 16px;
-  }
-  
-  .text-wrapper-3 {
-    color: #ffffff;
-    font-family: "Pretendard-Bold", Helvetica;
-    font-size: 10.8px;
-    font-weight: 700;
-    height: 16px;
-    left: 7px;
-    letter-spacing: -0.46px;
-    line-height: 15.4px;
-    position: absolute;
-    text-align: center;
-    top: 1px;
-    white-space: nowrap;
+    width: 21px;
   }
   
   .div-wrapper {
@@ -200,7 +182,6 @@
   }
   
   .overlap-group-wrapper-2 {
-    box-shadow: 0px 1.54px 3.08px #00000026;
     height: 20px;
     left: 31px;
     position: absolute;
@@ -282,7 +263,6 @@
   }
   
   .overlap-group-wrapper-3 {
-    box-shadow: 0px 2px 4px #00000026;
     height: 26px;
     left: 41px;
     position: absolute;
@@ -291,8 +271,6 @@
   }
   
   .overlap-group-4 {
-    /* background-image: url(./star-1-2.svg); */
-    /* background-color: #ffb701; */
     background-size: 100% 100%;
     height: 25px;
     position: relative;
@@ -300,28 +278,13 @@
   }
   
   .star-2 {
-    height: 21px;
+    height: 25px;
     left: 2px;
     position: absolute;
     top: 2px;
-    width: 21px;
+    width: 25px;
   }
-  
-  .text-wrapper-8 {
-    color: #ffffff;
-    font-family: "Pretendard-Bold", Helvetica;
-    font-size: 14px;
-    font-weight: 700;
-    height: 20px;
-    left: 9px;
-    letter-spacing: -0.6px;
-    line-height: 20px;
-    position: absolute;
-    text-align: center;
-    top: 2px;
-    white-space: nowrap;
-  }
-  
+
   .crown {
     height: 21px;
     left: 11px;
@@ -374,7 +337,7 @@
   }
   
   .span {
-    color: #ffb701;
+    color: #ffb801;
     letter-spacing: -0.1px;
   }
   
@@ -434,12 +397,11 @@
   }
   
   .overlap-group-wrapper-4 {
-    box-shadow: 0px 2px 4px #00000026;
-    height: 26px;
+    height: 30px;
     left: 26px;
     position: absolute;
     top: 11px;
-    width: 26px;
+    width: 30px;
   }
   
   .overlap-group-5 {
@@ -449,21 +411,6 @@
     height: 25px;
     position: relative;
     width: 25px;
-  }
-  
-  .text-wrapper-14 {
-    color: #ffffff;
-    font-family: "Pretendard-Bold", Helvetica;
-    font-size: 14px;
-    font-weight: 700;
-    height: 20px;
-    left: 8px;
-    letter-spacing: -0.6px;
-    line-height: 20px;
-    position: absolute;
-    text-align: center;
-    top: 2px;
-    white-space: nowrap;
   }
   
   .div-6 {
@@ -561,7 +508,7 @@
     width: 69px;
   }
   
-  .group-2 {
+  .group-3 {
     height: 42px;
     left: 70px;
     position: absolute;
@@ -569,7 +516,7 @@
     width: 195px;
   }
   
-  .overlap-group-2 {
+  .overlap-group-3 {
     height: 42px;
     position: relative;
   }
@@ -595,7 +542,7 @@
   }
   
   .ellipse-2 {
-    background-color: #ffb701;
+    background-color: #ffb801;
     border-radius: 14px;
     height: 28px;
     left: 7px;
@@ -630,7 +577,7 @@
   
   .view {
     align-items: center;
-    background-color: #ffb701;
+    background-color: #ffb801;
     border-radius: 8px;
     display: flex;
     height: 36px;
