@@ -2,6 +2,8 @@ import React from 'react';
 import "../components/Style/SplashStyles.css";
 import StyledContainer from '../components/Style/StyledContainer';
 
+import splash from "../assets/images/splash.png";
+
 export default function Splash(){
     return(
         <StyledContainer>
@@ -12,6 +14,7 @@ export default function Splash(){
                 <div className='splash-text'>금융 서비스</div>
             </div>
             {/* 이미지 삽입 */}
+            <img alt='Splash' src={splash} />
         </StyledContainer>
     )
 }
