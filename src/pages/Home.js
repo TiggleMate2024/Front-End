@@ -14,10 +14,20 @@ import num4 from "../assets/images/home/num4.png";
 import num5 from "../assets/images/home/num5.png";
 import crown from "../assets/images/home/crown.png";
 import vector from "../assets/images/home/vector.png";
+import mission from "../assets/images/home/mission.png";
+import bottom1 from "../assets/images/home/bottom1.png";
+import bottom2 from "../assets/images/home/bottom2.png";
+import bottom3 from "../assets/images/home/bottom3.png";
+import bottom4 from "../assets/images/home/bottom4.png";
+import bottom5 from "../assets/images/home/bottom5.png";
+
 
 export default function Frame(){
   return (
     <div className="out-frame">
+      <div className="frame" style={{height:"150px"}}>
+        <img className="mission-frame" alt="mission" src={mission}/>
+      </div>
       <div className="frame">
         <div className="overlap">
           <div className="div">
@@ -99,7 +109,7 @@ export default function Frame(){
         </div>
       </div>
       <div className="frame">
-          <div className="div-7">
+        <div className="div-7">
             <p className="q">
               Q. 만 18세 미만 미성년자는 신용점수가 <br />
               측정되지 않는다.
@@ -133,7 +143,7 @@ export default function Frame(){
               </div>
             </div>
           </div>
-          <div className="div-10">
+          <div className="div-2">
             <div className="text-wrapper-17">금융똑똑이가 되는 첫걸음!</div>
             <div className="div-11">
               <div className="text-wrapper-18">오늘의 금융지식 퀴즈</div>
@@ -141,6 +151,17 @@ export default function Frame(){
             <SlArrowRight className="img-2" />
           </div>
         </div>
+        {/* <div className="frame"> */}
+          <div className="bottom-component">
+            <div className="bottom-overlap-group">
+              <img className="bottom-frame" alt="Frame" src={bottom1} />
+              <img className="bottom-frame" alt="Frame" src={bottom2} />
+              <img className="bottom-frame" alt="Frame" src={bottom3} />
+              <img className="bottom-frame" alt="Frame" src={bottom4} />
+              <img className="bottom-frame" alt="Frame" src={bottom5} />
+            </div>
+          </div>
+        {/* </div> */}
     </div>
   );
 };

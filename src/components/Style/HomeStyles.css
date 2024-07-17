@@ -7,10 +7,17 @@
 }
 
 .frame{
-    height: 400px;
+    height: 450px;
     position: relative;
-    width: 600px;
+    width: 100%;
     margin-left: 10%;
+}
+
+  .mission-frame{
+    height: 130px;
+    position: relative;
+    width: 100%;
+    margin-left: -5%;
   }
   
   .overlap {
@@ -295,10 +302,8 @@
   
   .div-2 {
     height: 52px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 335px;
+    position: relative;
+    width: 100%;
   }
   
   .p {
@@ -605,10 +610,10 @@
   
   .div-9 {
     height: 26px;
-    left: 28px;
+    left: 15px;
     position: absolute;
     top: 341px;
-    width: 280px;
+    width: 100%;
   }
   
   .p-2 {
@@ -650,14 +655,6 @@
     width: 7px;
   }
   
-  .div-10 {
-    height: 52px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 335px;
-  }
-  
   .text-wrapper-17 {
     color: #7e838d;
     font-family: "Pretendard-Medium", Helvetica;
@@ -692,3 +689,34 @@
     white-space: nowrap;
     width: fit-content;
   }
+
+
+  .bottom-component {
+    background-color: #ffffff;
+    height: 100px;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+  }
+  
+  .bottom-overlap-group {
+    height: 86px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+  }
+  
+  .bottom-frame {
+    height: 60px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 60px;
+  }
+  
+  .bottom-home-indicator {
+    background-color: #ffffff;
+    height: 34px;
+  }
+  

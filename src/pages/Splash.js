@@ -1,17 +1,16 @@
 import React from 'react';
 import "../components/Style/SplashStyles.css";
-import StyledContainer from '../components/Style/StyledContainer';
+// import StyledContainer from '../components/Style/StyledContainer';
+import splash from '../assets/images/splash.png';
 
 export default function Splash(){
+
     return(
-        <StyledContainer>
-            <div className='splash-text-frame'>
-                <div className='splash-text'>습관이</div>
-                <div className='splash-text'>소득이 되는</div>
-                <div className='splash-text'>000</div>
-                <div className='splash-text'>금융 서비스</div>
-            </div>
-            {/* 이미지 삽입 */}
-        </StyledContainer>
+        // <StyledContainer>
+        //     <img alt='Splash' src={splash} style={{display: "flex", margin: "0 auto"}} />
+        // </StyledContainer>
+        <>
+            <img alt='Splash' src={splash} style={{display: "flex", margin: "0 auto", width:"100%"}} />
+        </>
     )
 }
