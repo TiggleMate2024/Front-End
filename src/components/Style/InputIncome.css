@@ -97,6 +97,14 @@
     margin-left: 10%;
 }
 
+.input-category {
+    margin: 0 0 auto;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin-left: 10%;
+}
+
 .satisfaction-btn {
     border: none;
     background-color: #ffffff;
