@@ -10,25 +10,13 @@ import RegisterButton from '../components/Register/RegisterButton';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 import axios from 'axios';
- 
-function Register(){
+
+function Login(){
 
     const navigate = useNavigate();
-
-    const DOMAIN_ARR = [
-        "gmail.com",
-        "naver.com",
-        "nate.com",
-        "daum.com",
-        "hanmail.net"
-      ];
-    
-    
     const [formData,setFormData] = useState({
-        nickname:'',
         username:'',
         password:'',
-        checkPassword:''
     });
 
     const handleChange = (e) => {
@@ -38,61 +26,44 @@ function Register(){
 
     const handleSubmit = async (e) => {
         e.preventDefault(); // 폼의 기본 제출 동작을 막음
-        if (formData.password !== formData.checkPassword) {
-            alert("비밀번호가 일치하지 않습니다.");
-            return;
-        }
 
         try {
-            const response = await axios.post('http://ec2-13-209-10-242.ap-northeast-2.compute.amazonaws.com:8080/join', formData);
+            const response = await axios.post('http://ec2-13-209-10-242.ap-northeast-2.compute.amazonaws.com:8080/login', formData);
             // 성공적인 응답 처리
             console.log('사용자 등록:', response.data);
-            alert("회원가입이 완료되었습니다.");
+            alert("로그인이 완료되었습니다.");
             navigate("/onboarding");
         } catch (error) {
             // 에러 처리
             console.error('사용자 등록 에러:', error);
-            alert("회원가입 중 에러가 발생했습니다.");
+            alert("로그인 중 에러가 발생했습니다.");
         }
     };
-
-
+    
     return(
         <StyledContainer>
             <FontAwesomeIcon icon={faChevronLeft} onClick={()=>{
                 navigate("/onboarding");
             }}/>
             <StyledBox>
-                <RegisterText children="회원가입" fontSize="24px" fontWeight="500" 
+                <RegisterText children="로그인" fontSize="24px" fontWeight="500" 
                     margin="20px 0px 60px 0px" lineHeight="34px"/>
-                    <form onSubmit={handleSubmit}>
-                        <RegisterText children="닉네임"/>
-                        <RegisterBox>
-                            <RegisterInput name='nickname' value={formData.nickname} onChange={handleChange}/>
-                        </RegisterBox>
-
+                    <form onSubmit={handleSubmit}>   
                         <RegisterText children="아이디"/>
                         <RegisterBox>
-                            <RegisterInput width="299px" onChange={handleChange} name="username" value={formData.username}/>
+                            <RegisterInput width="299px" name="username" onChange={handleChange}/>
                              {/* <RegisterText fontSize="15px" children="@" letterSpacing="0" lineHeight="132%"/>
-                             <RegisterSelect
-                                    domainArr={DOMAIN_ARR}
-                                    handleDomain={handleDomain}
-                                    domain={domain} /> */}
+                             <RegisterSelect/> */}
                         </RegisterBox>
-
+                         
                         <RegisterText children="비밀번호"/>
                         <RegisterBox>
-                            <RegisterInput type="password" onChange={handleChange} name="password" value={formData.password}/>
+                            <RegisterInput onChange={handleChange} type="password" name="password"/>
                         </RegisterBox>
-                        <RegisterBox>
-                            <RegisterInput type="password" name="checkPassword" value={formData.checkPassword} onChange={handleChange}/>
-                        </RegisterBox>
-                        <RegisterButton children="가입하기" type="submit"/>
-
+                        <RegisterButton children="로그인하기" type="submit"/>
                     </form>
             </StyledBox>
     </StyledContainer>
     )
 }
-export default Register;
+export default Login;

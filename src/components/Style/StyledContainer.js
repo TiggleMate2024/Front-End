@@ -3,14 +3,15 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     width:100%;
-    min-height: 80vh;
-    padding:30px 20px;
+    height: 100%;
+    padding:${props => props.padding || '20px'};
     box-sizing: border-box;
+    background-color:#F5F5F5;
 `
 
-function StyledContainer({children}){
+function StyledContainer({children,padding}){
     return(
-        <Container>
+        <Container padding={padding}>
             {children}
         </Container>
     )
