@@ -1,10 +1,10 @@
-import {Routes,Route,Link} from "react-router-dom";
+import {Routes,Route} from "react-router-dom";
 import Register from "./pages/Register";
 import Splash from "./pages/Splash";
 import Onboarding from "./pages/Onboarding";
-import Login from "./pages/Login";
-import HomeTest from "./pages/HomeTest";
-import AccountBook from "./pages/AccountBook";
+import Home from "./pages/Home";
+import InputIncome from "./pages/InputIncome";
+import Setting from "./pages/Setting";
 import './App.css';
 
 function App() {
@@ -12,11 +12,11 @@ function App() {
     <>
       <Routes>
           <Route path="/register" element={<Register/>}></Route>
-          <Route path="/splash" element={<Splash/>}></Route>
+          <Route path="/" element={<Splash/>}></Route>
+          <Route path="/setting" element={<Setting/>}></Route>
           <Route path="/onboarding" element={<Onboarding/>}></Route>
-          <Route path="/login" element={<Login/>}></Route>
-          <Route path="/test" element={<HomeTest/>}></Route>
-          <Route path='/accountBook' element={<AccountBook />}></Route>
+          <Route path="/home" element={<Home/>}></Route>
+          <Route path="/inputIncome" element={<InputIncome/>}></Route>
       </Routes>
     </>
   );

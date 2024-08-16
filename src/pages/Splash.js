@@ -1,20 +1,30 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import "../components/Style/SplashStyles.css";
-import StyledContainer from '../components/Style/StyledContainer';
+import splash from '../assets/images/splash.png';
 
 import splash from "../assets/images/splash.png";
 
 export default function Splash(){
+    // const [loading, setLoding] = useState(true);
+	const navigate = useNavigate();
+
+	const timeout = () => {
+		setTimeout(() => {
+			navigate('/onboarding');
+		}, 3000);
+	};
+
+	useEffect(() => {
+		timeout();
+		return () => {
+			clearTimeout(timeout);
+		};
+	}); 
+
     return(
-        <StyledContainer>
-            <div className='splash-text-frame'>
-                <div className='splash-text'>습관이</div>
-                <div className='splash-text'>소득이 되는</div>
-                <div className='splash-text'>000</div>
-                <div className='splash-text'>금융 서비스</div>
-            </div>
-            {/* 이미지 삽입 */}
-            <img alt='Splash' src={splash} />
-        </StyledContainer>
+        <>
+            <img alt='Splash' src={splash} style={{display: "flex", margin: "0 auto", width:"100%"}} />
+        </>
     )
 }

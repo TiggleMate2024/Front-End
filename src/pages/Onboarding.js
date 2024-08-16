@@ -1,29 +1,34 @@
 import React from 'react';
 import "../components/Style/OnboardingStyles.css";
-import StyledContainer from '../components/Style/StyledContainer';
-import OnboardingButton from '../components/Onboarding/OnboardingButton';
+import onboarding from '../assets/images/onboarding.png';
+import naverLogo from '../assets/images/naver_logo.png';
+import kakaoLogo from '../assets/images/kakao_logo.png';
+import googleLogo from '../assets/images/google_logo.png';
 
 export default function Splash(){
     return(
-        <StyledContainer>
-            <div className='onboarding-text-frame'>
-                <div className='onboarding-text'>내 성향에 맞는</div>
-                <div className='onboarding-text'>소비습관을 통해</div>
-                <div className='onboarding-text'>목표를 달성하세요!</div>
+        <>
+            <img alt='onboarding' src={onboarding} style={{display: "flex", margin: "0 auto", width:"100%"}} />
+            <div className='onboarding-frame'>
+                <button className='onboarding-btn'>이메일로 가입하기</button> 
+                {/* 가입 페이지로 연결 */}
+                <br />
+                <button className='onboarding-btn'>이메일로 로그인하기</button>
+                {/* 로그인 페이지로 연결 */}
+                <br />
+                <br />
+                <div className='onboarding-btn-frame'>
+                    <button className="onboarding-social-btn" style={{backgroundColor:"#00D037"}} onClick={() => window.location.href = "http://ec2-13-209-10-242.ap-northeast-2.compute.amazonaws.com:8080/oauth2/authorization/naver"}>
+                        <img alt='naver logo' src={naverLogo} />
+                    </button>
+                    <button className="onboarding-social-btn" style={{backgroundColor:"#F9E007"}} onClick={() => window.location.href = "http://ec2-13-209-10-242.ap-northeast-2.compute.amazonaws.com:8080/oauth2/authorization/kakao"}>
+                        <img alt='kakao logo' src={kakaoLogo} />
+                    </button>
+                    <button className="onboarding-social-btn" style={{backgroundColor:"#ffffff"}} onClick={() => window.location.href = "http://ec2-13-209-10-242.ap-northeast-2.compute.amazonaws.com:8080/oauth2/authorization/google"}>
+                        <img alt='google logo' src={googleLogo} />
+                    </button>
+                </div>
             </div>
-            <h3>이미지 삽입</h3>
-            <OnboardingButton children={"이메일로 가입하기"} />
-            <br />
-            <OnboardingButton children={"이메일로 로그인하기"} />
-            <div className='onboarding-btn-frame'>
-                <button className="onboarding-find-btn">아이디 찾기</button>
-                <button className="onboarding-find-btn">비밀번호 찾기</button>
-            </div>
-            <div className='onboarding-btn-frame'>
-                <button className="onboarding-social-btn">소셜</button>
-                <button className="onboarding-social-btn">로그인</button>
-                <button className="onboarding-social-btn">버튼</button>
-            </div>
-        </StyledContainer>
+            </>
     )
 }

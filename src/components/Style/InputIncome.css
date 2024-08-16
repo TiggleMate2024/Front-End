@@ -1,0 +1,130 @@
+.input-frame {
+    background-color: #ffffff;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.input-title-frame {
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 20px;
+    width: 100%;
+}
+
+.input-title {
+    background-color: #ffffff;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.input-text1 {
+    color: #46484d;
+    font-family: "Pretendard-SemiBold", Helvetica;
+    font-size: 25px;
+    font-weight: 600;
+    height: 30px;
+    letter-spacing: -0.6px;
+    line-height: 24px;
+    position: relative;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.input-frame2 {
+    height: 20%;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+    gap: 5%;
+    width: 90%;
+}
+
+.input-text2 {
+    color: #46484d;
+    font-family: "Pretendard-SemiBold", Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    height: 25px;
+    letter-spacing: -0.6px;
+    line-height: 24px;
+    position: relative;
+    white-space: nowrap;
+    margin-left: 30px;
+}
+
+.input-date {
+    border: none;
+    border-bottom-style: solid;
+    left: 20px;
+    position: relative;
+    width: 90%;
+    border-bottom-width: 1px;
+}
+
+.income-btn {
+    border: none;
+    background-color: #ffffff;
+}
+
+.input-frame3 {
+    height: 20%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    width: 90%;
+}
+
+.input-cost {
+    margin: 0 0 auto;
+    text-align: right;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin-left: 10%;
+}
+
+.input-category {
+    margin: 0 0 auto;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin-left: 10%;
+}
+
+.satisfaction-btn {
+    border: none;
+    background-color: #ffffff;
+    margin-left: 10%;
+}
+
+.input-memo {
+    margin: 0 0 auto;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    height: 100px;
+    margin-left: 10%;
+    resize: none;
+    border-radius: 10px;
+    background-color: #f6f2f2;
+}
+
+.income-save-btn {
+    border: none;
+    background-color: #ffffff;
+    margin-left: 5%;
+}
