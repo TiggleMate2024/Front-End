@@ -1,0 +1,18 @@
+progress{
+    appearance: none;
+}
+progress::-webkit-progress-bar{
+    border:none;
+    border-radius:20px;
+    background-color:#E9E5DF;
+    overflow:hidden;
+    width:295px; height:14px;
+}
+progress::-webkit-progress-value{
+    background-color: #F36A4C;
+    border-radius: 20px;
+}
+.Message{
+    position:absolute;
+    top:33px; left:237px;
+}

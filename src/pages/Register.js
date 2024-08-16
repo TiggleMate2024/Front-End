@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import {useDispatch} from "react-redux";
 import StyledContainer from '../components/Style/StyledContainer';
 import StyledBox from '../components/Style/StyledBox';
 import RegisterText from '../components/Register/RegisterText';
@@ -10,47 +9,53 @@ import RegisterBox from '../components/Register/RegisterBox';
 import RegisterButton from '../components/Register/RegisterButton';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
+import axios from 'axios';
  
 function Register(){
 
     const navigate = useNavigate();
 
-    const [inputs,setInput] = useState({
-        userId: "",
-        userPw: "",
+    const DOMAIN_ARR = [
+        "gmail.com",
+        "naver.com",
+        "nate.com",
+        "daum.com",
+        "hanmail.net"
+      ];
+    
+    
+    const [formData,setFormData] = useState({
+        nickname:'',
+        username:'',
+        password:'',
+        checkPassword:''
     });
 
-    const {userId,userPw} = inputs;
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
 
-    const onChange = (e) => {
-        const {value,name} = e.target;
-        setInput({
-            ...inputs,
-            [name]:value,
-        })
-    }
+    const handleSubmit = async (e) => {
+        e.preventDefault(); // 폼의 기본 제출 동작을 막음
+        if (formData.password !== formData.checkPassword) {
+            alert("비밀번호가 일치하지 않습니다.");
+            return;
+        }
 
-    const onSubmit = (e) => {
-        e.preventDefault();
-        let body = {
-            id: userId,
-            password: userPw,
-          };
-          if (!userId || !userPw) {
-            alert("필수 항목을 작성하세요!");
-          } else {
-            // dispatch(loginUser(body))
-            //   .then((response) => {
-            //     if (response.payload.loginSuccess) {
-            //       window.localStorage.setItem('userId', response.payload.userId);
-            //       history.push("/board");
-            //     } else {
-            //       alert(response.payload.message);
-            //     }
-            //   })
-            alert("회원가입 완료!");
-          }
-    }
+        try {
+            const response = await axios.post('http://ec2-13-209-10-242.ap-northeast-2.compute.amazonaws.com:8080/join', formData);
+            // 성공적인 응답 처리
+            console.log('사용자 등록:', response.data);
+            alert("회원가입이 완료되었습니다.");
+            navigate("/onboarding");
+        } catch (error) {
+            // 에러 처리
+            console.error('사용자 등록 에러:', error);
+            alert("회원가입 중 에러가 발생했습니다.");
+        }
+    };
+
 
     return(
         <StyledContainer>
@@ -60,27 +65,31 @@ function Register(){
             <StyledBox>
                 <RegisterText children="회원가입" fontSize="24px" fontWeight="500" 
                     margin="20px 0px 60px 0px" lineHeight="34px"/>
-                    <form onSubmit={onSubmit}>
+                    <form onSubmit={handleSubmit}>
                         <RegisterText children="닉네임"/>
                         <RegisterBox>
-                            <RegisterInput/>
+                            <RegisterInput name='nickname' value={formData.nickname} onChange={handleChange}/>
                         </RegisterBox>
 
                         <RegisterText children="아이디"/>
                         <RegisterBox>
-                            <RegisterInput width="136px" onChange={onChange} name="userId" value={userId}/>
-                             <RegisterText fontSize="15px" children="@" letterSpacing="0" lineHeight="132%"/>
-                             <RegisterSelect/>
+                            <RegisterInput width="299px" onChange={handleChange} name="username" value={formData.username}/>
+                             {/* <RegisterText fontSize="15px" children="@" letterSpacing="0" lineHeight="132%"/>
+                             <RegisterSelect
+                                    domainArr={DOMAIN_ARR}
+                                    handleDomain={handleDomain}
+                                    domain={domain} /> */}
                         </RegisterBox>
 
                         <RegisterText children="비밀번호"/>
                         <RegisterBox>
-                            <RegisterInput type="password" onChange={onChange} name="userPw" value={userPw}/>
+                            <RegisterInput type="password" onChange={handleChange} name="password" value={formData.password}/>
                         </RegisterBox>
                         <RegisterBox>
-                            <RegisterInput type="password"/>
+                            <RegisterInput type="password" name="checkPassword" value={formData.checkPassword} onChange={handleChange}/>
                         </RegisterBox>
                         <RegisterButton children="가입하기" type="submit"/>
+
                     </form>
             </StyledBox>
     </StyledContainer>
