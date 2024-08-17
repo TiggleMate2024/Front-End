@@ -5,6 +5,7 @@ import Onboarding from "./pages/Onboarding";
 import Home from "./pages/Home";
 import InputIncome from "./pages/InputIncome";
 import Setting from "./pages/Setting";
+import Login from "./pages/Login";
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/onboarding" element={<Onboarding/>}></Route>
           <Route path="/home" element={<Home/>}></Route>
           <Route path="/inputIncome" element={<InputIncome/>}></Route>
+          <Route path='login' element={<Login />}></Route>
       </Routes>
     </>
   );

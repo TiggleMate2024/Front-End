@@ -1,4 +1,5 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 import "../components/Style/OnboardingStyles.css";
 import onboarding from '../assets/images/onboarding.png';
 import naverLogo from '../assets/images/naver_logo.png';
@@ -6,14 +7,16 @@ import kakaoLogo from '../assets/images/kakao_logo.png';
 import googleLogo from '../assets/images/google_logo.png';
 
 export default function Splash(){
+    const navigate = useNavigate();
+
     return(
         <>
             <img alt='onboarding' src={onboarding} style={{display: "flex", margin: "0 auto", width:"100%"}} />
             <div className='onboarding-frame'>
-                <button className='onboarding-btn'>이메일로 가입하기</button> 
+                <button className='onboarding-btn' onClick={() => navigate('/register')}>이메일로 가입하기</button> 
                 {/* 가입 페이지로 연결 */}
                 <br />
-                <button className='onboarding-btn'>이메일로 로그인하기</button>
+                <button className='onboarding-btn' onClick={() => navigate('/login')}>이메일로 로그인하기</button>
                 {/* 로그인 페이지로 연결 */}
                 <br />
                 <br />

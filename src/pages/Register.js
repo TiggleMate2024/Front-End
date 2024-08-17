@@ -34,6 +34,7 @@ function Register(){
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
+        console.log(e.target);
     };
 
     const handleSubmit = async (e) => {
@@ -54,6 +55,8 @@ function Register(){
             console.error('사용자 등록 에러:', error);
             alert("회원가입 중 에러가 발생했습니다.");
         }
+
+        console.log(formData);
     };
 
 

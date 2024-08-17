@@ -32,12 +32,23 @@ function Login(){
             // 성공적인 응답 처리
             console.log('사용자 등록:', response.data);
             alert("로그인이 완료되었습니다.");
-            navigate("/onboarding");
+            const token = response.login.headers['login'];
+            const accessToken = token ? JSON.parse(token).access : null;
+            if (accessToken) {
+                // Axios의 기본 헤더에 Authorization 추가
+                axios.defaults.headers.common['Authorization'] = `${token}`;
+                // 홈 페이지로 이동
+                navigate("/home");
+                
+            } else {
+                alert("토큰을 가져오지 못했습니다.");
+            }
         } catch (error) {
             // 에러 처리
             console.error('사용자 등록 에러:', error);
             alert("로그인 중 에러가 발생했습니다.");
         }
+        console.log(formData);
     };
     
     return(

@@ -11,9 +11,9 @@ const StyledInput = styled.input`
     type:${(props)=> props.type || "text"}
 `
 
-function RegisterInput({width,type}){
+function RegisterInput({width,type,value,onChange,name}){
     return(
-            <StyledInput width={width} type={type}/>
+            <StyledInput width={width} type={type} value={value} onChange={onChange} name={name}/>
     )
 }
 export default RegisterInput;

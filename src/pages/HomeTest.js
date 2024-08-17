@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import styled from 'styled-components';
 import StyledContainer from '../components/Style/StyledContainer';
 import StyledComponentBox from '../components/Style/StyledComponentBox';
@@ -17,6 +17,8 @@ import FoodImg from '../assets/images/tteokImg.png';
 import MoneyImg from '../assets/images/moneyImg.png';
 import arrow from '../assets/images/arrow.png';
 
+import axios from 'axios';
+
 function HomeTest(){
 
     const StyledP = styled.p`
@@ -29,6 +31,22 @@ function HomeTest(){
         {img:FoodImg, title:'친구들이랑 엽떡!', amount:'-12,000원', date:'04.18(목)'},
         {img:BookImg, title:'수능특강 문제집 구매', amount:'-18,000원', date:'04.18(목)'}
     ];
+
+    const fetchData = async() => {
+        try {
+            const response = await axios.get('http://ec2-13-209-10-242.ap-northeast-2.compute.amazonaws.com:8080/api/account-book/account/list');
+            // 성공적인 응답 처리
+            console.log(response.data);
+            alert('데이터 받아오기 성공');
+        } catch (error) {
+            // 에러 처리
+            console.error(error);
+        }
+    }
+    
+    useEffect(() => {
+        fetchData();
+      }, []);
 
     return(
         <StyledContainer>
