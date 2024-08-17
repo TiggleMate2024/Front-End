@@ -3,6 +3,7 @@ import "../components/Style/HomeStyles.css";
 import { SlArrowRight } from "react-icons/sl";
 import { BiCircle } from "react-icons/bi";
 import { RiCloseLargeFill } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 import num1Image from "../assets/images/home/num1_image.png";
 import num2Image from "../assets/images/home/num2_image.png";
@@ -44,6 +45,8 @@ import axios from 'axios';
 
 export default function Frame(){
 
+  const navigate = useNavigate();
+
   const StyledP = styled.p`
         color:#7E838D;
         font-family:var(--font-regular);
@@ -59,7 +62,7 @@ export default function Frame(){
         try {
             const response = await axios.get('http://ec2-13-209-10-242.ap-northeast-2.compute.amazonaws.com:8080/api/account-book/account/list');
             // 성공적인 응답 처리
-            console.log(response.data);
+            console.log(response);
             alert('데이터 받아오기 성공');
         } catch (error) {
             // 에러 처리
@@ -270,7 +273,7 @@ export default function Frame(){
           <div className="bottom-component">
             <div className="bottom-overlap-group">
               <img className="bottom-frame" alt="Frame" src={bottom1} />
-              <img className="bottom-frame" alt="Frame" src={bottom2} />
+              <img className="bottom-frame" alt="Frame" src={bottom2} onClick={() => navigate('/accountbook')}/>
               <img className="bottom-frame" alt="Frame" src={bottom3} />
               <img className="bottom-frame" alt="Frame" src={bottom4} />
               <img className="bottom-frame" alt="Frame" src={bottom5} />

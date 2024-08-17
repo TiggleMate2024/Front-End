@@ -30,11 +30,10 @@ function Login(){
         try {
             const response = await axios.post('http://ec2-13-209-10-242.ap-northeast-2.compute.amazonaws.com:8080/login', formData);
             // 성공적인 응답 처리
-            console.log('사용자 등록:', response.data);
             alert("로그인이 완료되었습니다.");
-            const token = response.login.headers['login'];
-            const accessToken = token ? JSON.parse(token).access : null;
-            if (accessToken) {
+            const token = response.headers['access'];
+            console.log(token,response);
+            if (token) {
                 // Axios의 기본 헤더에 Authorization 추가
                 axios.defaults.headers.common['Authorization'] = `${token}`;
                 // 홈 페이지로 이동

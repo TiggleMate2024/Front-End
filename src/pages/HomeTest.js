@@ -17,6 +17,8 @@ import FoodImg from '../assets/images/tteokImg.png';
 import MoneyImg from '../assets/images/moneyImg.png';
 import arrow from '../assets/images/arrow.png';
 
+
+
 import axios from 'axios';
 
 function HomeTest(){
